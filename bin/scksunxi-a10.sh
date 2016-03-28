@@ -10,5 +10,10 @@ tar -xzvf linux-sunxi.tar.gz
 cd linux-sunxi
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- xconfig
 +
+> compile.sh
+cat <<+ > compile.sh
+#!/bin/sh
+make -j$(nproc) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage modules
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=output modules_install
 cd linux-sunxi
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- xconfig
