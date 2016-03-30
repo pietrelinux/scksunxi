@@ -1,6 +1,6 @@
 #!/bin/sh
 # Descarga dependencias para la compilacion cruzada
-sudo apt-get install -y build-essential bin86 kernel-package libqt4-dev wget libncurses5 libncurses5-dev qt4-dev-tools libqt4-dev zlib1g-dev gcc-arm-linux-gnueabihf git debootstrap u-boot-tools device-tree-compiler libusb-1.0-0-dev 
+sudo apt-get install -y build-essential bin86 kernel-package libqt4-dev wget libncurses5 libncurses5-dev qt4-dev-tools libqt4-dev zlib1g-dev gcc-arm-linux-gnueabihf git debootstrap u-boot-tools device-tree-compiler libusb-1.0-0-dev android-tools-adb android-tools-fastboot
 #Descarga kernel sunxi,el u-boot y lsd herramientas de sunxi
 git clone -b sunxi-3.4 https://github.com/linux-sunxi/linux-sunxi.git
 git clone -b sunxi https://github.com/linux-sunxi/u-boot-sunxi.git
