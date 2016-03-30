@@ -10,7 +10,7 @@ tar -czvf linux-sunxi.tar.gz linux-sunxi/
 # Comprime u-boot
 tar -czvf uboot.tar.gz u-boot-sunxi/
 #Comprime sunxi-tools
-sudo  tar -czvf sunxi-tools.tar.gz sunxi-tools/
+tar -czvf sunxi-tools.tar.gz sunxi-tools/
 
 #Crea script reset
 > reset.sh
@@ -24,17 +24,26 @@ tar -xzvf uboot.tar.gz
 tar -xzvf sunxi-tools.tar.gz
 +
 
-> compile.sh
-cat <<+ > compile.sh
+> kernel.sh
+cat <<+ > kernel.sh
 #!/bin/sh
-cd sunxi-tools
-make -j$(nproc)
-make install
-cd ..
+
 cd linux-sunxi
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- xconfig
 make -j$(nproc) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage modules
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=output modules_install
 +
 
+> uboot.sh
+cat <<+ > tools.sh
+cd u-boot-sunxi
+grep sunxi boards.cfg | awk '{print $7}'
++
+
+> tools.sh
+cat <<+ > tools.sh
+#!/bin/sh
+cd sunxi-tools
+make -j$(nproc)
+make install
 
