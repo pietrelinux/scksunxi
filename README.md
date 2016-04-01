@@ -2,11 +2,21 @@
 
 This script automates the process of preparing to work on the kernel, the u- boot and tools sunxi
 
-How to use and how it works
+# How to use:
+
+download this script with git:
+
+sudo git clone https://github.com/pietrelinux/scksunxi.git
+
+execute script:
+
+sudo sh scksunxi/bin/sunxi.sh
+
+How it works:
 
 1 Install dependencies , tools and toolchain
 
-2 Download the last tree kernel sunxi
+2 Download the last  kernel tree sunxi
 
 3 Download the last tree u-boot sunxi
 
