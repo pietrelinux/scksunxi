@@ -20,21 +20,23 @@ rm -r linux-sunxi
 rm -r u-boot-sunxi
 rm -r sunxi-tools
 tar -xzvf linux-sunxi.tar.gz
-tar -xzvf uboot.tar.gz  
+tar -xzvf u-boot-sunxi.tar.gz
 tar -xzvf sunxi-tools.tar.gz
 +
 
 > kernel.sh
 cat <<+ > kernel.sh
 #!/bin/sh
+echo "Remember,in xconfig menu load defconfig for your board click in load and locate in /arch/arm/configs"
+sleep 5
 cd linux-sunxi
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- xconfig
 make -j$(nproc) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage modules
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=output modules_install
 +
 
-> uboot.sh
-cat <<+ > uboot.sh
+> u-boot.sh
+cat <<+ > u-boot.sh
 #!/bin/sh
 cd u-boot-sunxi/
 echo "Now select your board configs to the folder and make CROSS_COMPILE=arm-linux-gnueabihf- <board_name>_defconfig"
