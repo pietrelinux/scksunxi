@@ -41,7 +41,7 @@ echo "Now select your board configs to the folder and make CROSS_COMPILE=arm-lin
 sleep 5
 cd u-boot-sunxi/
 ls configs
-echo "Remember,make CROSS_COMPILE=arm-linux-gnueabihf- <board_name>_defconfig"
+echo "Remember,make -j$(nproc) CROSS_COMPILE=arm-linux-gnueabihf- <board_name>_defconfig"
 +
 
 > tools.sh
