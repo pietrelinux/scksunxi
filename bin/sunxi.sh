@@ -27,7 +27,6 @@ tar -xzvf sunxi-tools.tar.gz
 > kernel.sh
 cat <<+ > kernel.sh
 #!/bin/sh
-
 cd linux-sunxi
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- xconfig
 make -j$(nproc) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- uImage modules
@@ -43,7 +42,6 @@ sleep 5
 cd u-boot-sunxi/
 ls configs
 echo "Remember,make CROSS_COMPILE=arm-linux-gnueabihf- <board_name>_defconfig"
-
 +
 
 > tools.sh
