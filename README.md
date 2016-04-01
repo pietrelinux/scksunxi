@@ -1,10 +1,14 @@
 # scksunxi
 
-This script automates the process of preparing to work on the kernel, the u- boot and tools sunxi
+## The idea
 
-# How to use:
 
-download this script with git:
+This script automates the process of preparing the enviroment to build the kernel,the u-boot,sunxi-tools,also compress everything and create the scripts to decompress a kernel,u-boot and sunxi-tools for recompile,this way you do not have to re-download everything again.
+
+
+## How to use:
+
+Download this script with git:
 
 sudo git clone https://github.com/pietrelinux/scksunxi.git
 
@@ -12,7 +16,7 @@ execute script:
 
 sudo sh scksunxi/bin/sunxi.sh
 
-How it works:
+## How it works:
 
 1 Install dependencies , tools and toolchain
 
@@ -26,18 +30,20 @@ How it works:
 
 6 Create scripts:
 
-Reset.sh:
+## scripts
+
+### Reset.sh
 
 Erase folders linux-sunxi and u-boot and extract kernel and uboot previously compressed
 
-kernel.sh:
+### kernel.sh
 
-compile xconfig menu for to configure it to your liking and compile kernel with modules
+Compile xconfig menu for to configure it to your liking and compile kernel with modules
 
-u-boot.sh:
+### u-boot.sh
 
-Prepare and help to compile u-boot for your board
+Prepare and help to compile u-boot for your board.
 
-tools.sh
+### tools.sh
 
-extract sunxi-tools, compile this and install
+Extract sunxi-tools, compile this and install.
