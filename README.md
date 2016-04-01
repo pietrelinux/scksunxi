@@ -16,14 +16,18 @@ How to use and how it works
 
 6 Create scripts:
 
+Reset.sh:
+
+Erase folders linux-sunxi and u-boot and extract kernel and uboot previously compressed
+
 kernel.sh:
 
 compile xconfig menu for to configure it to your liking and compile kernel with modules
 
-uboot.sh 
+u-boot.sh:
 
-Reset.sh (erase folders linux-sunxi and u-boot and extract kernel and uboot previously compressed
-u-boot.sh only 
+Prepare and help to compile u-boot for your board
 
 tools.sh
+
 extract sunxi-tools, compile this and install
