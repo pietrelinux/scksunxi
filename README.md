@@ -13,8 +13,8 @@ Download this script with git:
 git clone https://github.com/pietrelinux/scksunxi.git
 
 execute script:
-
-sudo sh scksunxi/bin/sunxi.sh
+cd scksunxi/bin
+sudo sh sunxi.sh
 
 ## How it works:
 
