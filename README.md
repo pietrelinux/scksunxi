@@ -10,7 +10,7 @@ This script automates the process of preparing the enviroment to build the kerne
 
 Download this script with git:
 
-sudo git clone https://github.com/pietrelinux/scksunxi.git
+git clone https://github.com/pietrelinux/scksunxi.git
 
 execute script:
 
