@@ -62,8 +62,8 @@ tar -czvf linux-sunxi.tar.gz sunxi/kernel/3-4/linux-sunxi
 mv linux-sunxi.tar.gz sunxi/kernel/3-4/
 
 # Script kernel Sunxi 3.4
-> sunxi/kernel/3-4/kernel3-4.sh
-cat <<+ > sunxi/kernel/3-4/kernel3-4.sh
+> sunxi/kernel/3-4/linux-sunxi.sh
+cat <<+ > sunxi/kernel/3-4/linux-sunxi.sh
 #!/bin/sh
 rm -r linux-sunxi
 tar -xzvf linux-sunxi.tar.gz
@@ -80,8 +80,8 @@ git clone git://github.com/linux-sunxi/linux-sunxi.git -b sunxi/kernel/next/linu
 tar -czvf linux-sunxi.tar.gz sunxi/kernel/next/linux-sunxi/
 mv linux-sunxi.tar.gz sunxi/kernel/next/
 # Script Kernel Next 
-> sunxi/kernel/next/next.sh
-cat <<+ > sunxi/kernel/next/next.sh
+> sunxi/kernel/next/linux-sunxi.sh
+cat <<+ > sunxi/kernel/next/linux-sunxi.sh
 #!/bin/sh
 rm -r linux-sunxi
 tar -xzvf linux-sunxi.tar.gz
@@ -117,8 +117,8 @@ git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git  sunx
 tar -czvf linux.tar.gz sunxi/kernel/mainline/linux
 mv linux.tar.gz sunxi/kernel/mainline/
 # Script Kernel mainline
-> sunxi/kernel/mainline/mainline.sh
-cat <<+ > sunxi/kernel/mainline/mainline.sh
+> sunxi/kernel/mainline/linux.sh
+cat <<+ > sunxi/kernel/mainline/linux.sh
 #!/bin/sh
 rm -r linux
 tar -xzvf linux.tar.gz
