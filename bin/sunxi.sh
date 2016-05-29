@@ -174,5 +174,5 @@ make -j$(nproc) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
 # sacar .config a output
 # rootfs
 
-git clone https://github.com/pietrelinux/rootfs /sunxi/rootfs
+git clone https://github.com/pietrelinux/rootfs sunxi/rootfs
 
