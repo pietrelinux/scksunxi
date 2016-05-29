@@ -58,8 +58,8 @@ make install
 
 # kernel Sunxi 3.4
 git clone -b sunxi-3.4 https://github.com/linux-sunxi/linux-sunxi.git sunxi/kernel/3-4/linux-sunxi
-tar -czvf linux-sunxi.tar.gz /sunxi/kernel/3-4/linux-sunxi
-mv linux-sunxi.tar.gz /sunxi/kernel/3-4/
+tar -czvf linux-sunxi.tar.gz sunxi/kernel/3-4/linux-sunxi
+mv linux-sunxi.tar.gz sunxi/kernel/3-4/
 
 # Script kernel Sunxi 3.4
 > sunxi/kernel/3-4/kernel3-4.sh
