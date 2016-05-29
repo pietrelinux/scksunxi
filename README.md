@@ -1,49 +1,61 @@
-# scksunxi
+Scksunxi es un script que se encarga de descargar y preparar el entorno de compilación adecuado para instalat linux en dispositivos allwinner, este script genera 4 carpetas centrales
 
-## The idea
+Kernel
+U-Boot
+Rootfs
+sunxi-Tools
 
+Dentro de cada una de estas carpetas estan los direferentes versiones de kernel,u-boot,el script de instalación de un rootfs.img con un sistema completo Lubuntu 14 y por ultimo las sunxi tools así como las tools modificadas de chip 
 
-This script automates the process of preparing the enviroment to build the kernel,the u-boot,sunxi-tools,also compress everything and create the scripts to decompress a kernel,u-boot and sunxi-tools for recompile,this way you do not have to re-download everything again.
+Todas las carpetas tienen una misma estructura
 
+script.sh (Elimina codigo fuente original, descomprime el codigo fuente y compila de nuevo el codigo con la salida a la carpeta output)
+Codigo-fuente
+Fuentes comprimidas.tar.gz
+output (el resultado de la compilación del script)
 
-## How to use:
-
-Download this script with git:
-
-git clone https://github.com/pietrelinux/scksunxi.git
-
-execute script:
-cd scksunxi/bin
-sudo sh sunxi.sh
-
-## How it works:
-
-1 Install dependencies , tools and toolchain
-
-2 Download the last  kernel tree sunxi
-
-3 Download the last tree u-boot sunxi
-
-4 Download the sunxi-tools
-
-5 compresses the kernel, u- boot and sunxi tools
-
-6 Create scripts:
-
-## scripts
-
-### Reset.sh
-
-Erase folders linux-sunxi and u-boot and extract kernel and uboot previously compressed
-
-### kernel.sh
-
-Compile xconfig menu for to configure it to your liking and compile kernel with modules
-
-### u-boot.sh
-
-Prepare and help to compile u-boot for your board.
-
-### tools.sh
-
-Extract sunxi-tools, compile this and install.
+├── kernel
+│   ├── 3-4
+│   │   ├── kernel3-4.sh
+│   │   ├── linux-sunxi
+│   │   ├── linux-sunxi.tar.gz
+│   │   └── output
+│   ├── allwinner
+│   │   ├── allwinner.sh
+│   │   ├── linux-3.4-sunxi
+│   │   ├── linux-3.4-sunxi.tar.gz
+│   │   └── output
+│   ├── mainline
+│   │   ├── linux
+│   │   ├── linux.tar.gz
+│   │   ├── mainline.sh
+│   │   └── output
+│   └── next
+│       ├── linux-sunxi.tar.gz
+│       ├── next.sh
+│       └── output
+├── rootfs
+│   ├── LICENSE
+│   ├── output
+│   ├── README.md
+│   └── rootfs.sh
+├── tools
+│   ├── chip
+│   └── sunxi
+│       ├── sunxi-tools.tar.gz
+│       └── toolsx86.sh
+└── u-boot
+    ├── allwinner
+    │   ├── allwinner.sh
+    │   ├── bootloader
+    │   ├── bootloader.tar.gz
+    │   └── output
+    ├── denx
+    │   ├── output
+    │   ├── u-boot.sh
+    │   ├── u-boot-sunxi
+    │   └── u-boot-sunxi.tar.gz
+    └── sunxi
+        ├── output
+        ├── u-boot.sh
+        └── u-boot-sunxi.tar.gz
