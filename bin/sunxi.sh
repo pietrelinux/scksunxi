@@ -43,7 +43,7 @@ mkdir sunxi/tools/chip
 git clone https://github.com/linux-sunxi/sunxi-tools sunxi/tools/sunxi/sunxi-tools
 tar -czvf sunxi-tools.tar.gz sunxi/tools/sunxi/sunxi-tools/
 mv sunxi-tools.tar.gz sunxi/tools/sunxi/
-rm -r sunxi/tools/sunxi/sunxi-tools/
+
 # script tools x86
 > sunxi/tools/sunxi/toolsx86.sh
 cat <<+ > sunxi/tools/sunxi/toolsx86.sh
@@ -133,7 +133,6 @@ make -j$(nproc) ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- INSTALL_MOD_PATH=out
 git clone -b sunxi https://github.com/linux-sunxi/u-boot-sunxi.git sunxi/u-boot/sunxi/u-boot-sunxi 
 tar -czvf u-boot-sunxi.tar.gz  sunxi/u-boot/sunxi/u-boot-sunxi
 mv u-boot-sunxi.tar.gz sunxi/u-boot/sunxi/
-rm -r sunxi/u-boot/sunxi/u-boot-sunxi
 
 # script U-boot sunxi
 > sunxi/u-boot/sunxi/u-boot.sh
