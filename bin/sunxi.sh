@@ -1,6 +1,6 @@
 #!/bin/sh
-# Descarga dependencias para la compilacion cruzada
 echo " Descarga dependencias para la compilacion cruzada"
+sleep 3
 apt-get install -y build-essential bin86 kernel-package libqt4-dev 
 wget libncurses5 libncurses5-dev qt4-dev-tools libqt4-dev zlib1g-dev 
 gcc-arm-linux-gnueabihf git debootstrap u-boot-tools device-tree-compiler
@@ -38,10 +38,7 @@ mkdir sunxi/rootfs/output
 mkdir sunxi/tools/sunxi
 mkdir sunxi/tools/chip
 
-
-
-#Descarga las distintas versiones de kernel para allwinner disponibles,así como el u-boot y las herramientas de sunxi
-echo #Descarga las distintas versiones de kernel para allwinner disponibles,así como el u-boot y las herramientas de sunxi
+echo "Descarga las distintas versiones de kernel para allwinner disponibles,así como el u-boot y las herramientas de sunxi"
 
 
 echo " descargando y compilando sunxi-tools"
